@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -9,8 +9,10 @@
         android:id="@+id/tfMainEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/gray"
-        android:layout_margin="24dp"
+        android:textColorHint="@color/grey"
+        android:layout_marginTop="54dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -20,7 +22,7 @@
             android:id="@+id/edMainEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
+            android:textSize="24sp"
             android:textColor="@color/blue"
             android:background="@color/white"
             android:inputType="textEmailAddress"
@@ -32,8 +34,10 @@
         android:id="@+id/tfMainPwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColorHint="@color/gray"
-        android:layout_margin="24dp"
+        android:textColorHint="@color/grey"
+        android:layout_marginTop="54dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tfMainEmail"
@@ -43,7 +47,7 @@
             android:id="@+id/edMainPwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="21sp"
+            android:textSize="24sp"
             android:textColor="@color/blue"
             android:background="@color/white"
             android:inputType="textPassword"
@@ -69,11 +73,11 @@
         android:layout_height="1dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="63dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/dvOr"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btMainLogin"
         />
 
     <View
@@ -82,38 +86,35 @@
         android:layout_height="1dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
+        android:layout_marginTop="63dp"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toEndOf="@id/dvOr"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btMainLogin"
         />
 
     <TextView
         android:id="@+id/dvOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="40dp"
+        android:layout_marginTop="52dp"
         android:text="OR"
-        android:textColor="@color/darkgray"
+        android:textColor="@color/darkgrey"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/btMainLogin"/>
 
     <Button
         android:id="@+id/btMainRegister"
-        app:layout_constraintTop_toBottomOf="@id/dvOr"
-        android:backgroundTint="@color/gray"
+        android:backgroundTint="@color/grey"
         android:textColor="@color/white"
         android:text="Register"
-        android:layout_marginTop="120dp"
         android:textSize="21sp"
+        android:layout_marginTop="557dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         style="@style/DHFButton"
         />
 

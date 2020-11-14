@@ -8,10 +8,11 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue">#3F51B5</color>
     <color name="bluebar">#303F9F</color>
-    <color name="gray">#8492A6</color>
+    <color name="grey">#8492A6</color>
     <color name="red">#FF5252</color>
-    <color name="darkgray">#FF47525E</color>
-    <color name="ligtgray">#C0CCDA</color>
+    <color name="darkgrey">#FF47525E</color>
+    <color name="ligtgrey">#C0CCDA</color>
+    <color name="midgrey">#5A6978</color>
     <color name="darkblue">#FF1F2D3D</color>
     <color name="lightblue">#8492A6</color>
 </resources>

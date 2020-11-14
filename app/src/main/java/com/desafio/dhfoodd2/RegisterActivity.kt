@@ -1,16 +1,11 @@
-package com.example.dhfoodd2
+package com.desafio.dhfoodd2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import org.w3c.dom.Text
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -103,7 +98,7 @@ class RegisterActivity : AppCompatActivity() {
             }
 
             if (isValid) {
-                startActivity(Intent(this,HomeActivity::class.java))
+                startActivity(Intent(this, HomeActivity::class.java))
             }
         }
 

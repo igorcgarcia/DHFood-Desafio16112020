@@ -1,5 +1,6 @@
-package com.example.dhfoodd2
+package com.desafio.dhfoodd2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.dhfoodd2.HomeActivity.Companion.KEY_INTENT_PLACE
+import com.desafio.dhfoodd2.HomeActivity.Companion.KEY_INTENT_PLACE
+//import com.example.dhfoodd2.R
 import com.google.android.material.shadow.ShadowRenderer
 
 class DetalheMenuActivity : AppCompatActivity() {
@@ -38,7 +40,7 @@ class DetalheMenuActivity : AppCompatActivity() {
 
     private fun initComponents(){
 
-        val menus =mutableListOf<Menus>()
+        val menus = mutableListOf<Menus>()
         val menuEscolha = mutableListOf<Menus>()
 
         val menu1 = Menus("Carlos Pizza","PALERMO","https://wearepalermo.com/wp-content/uploads/2017/06/best-pizza-palermo.jpg","Berinjela assada, molho de tomate, pesto & azeitona (acompanha pão da casa)")
@@ -64,7 +66,6 @@ class DetalheMenuActivity : AppCompatActivity() {
         menus.add(menu6)
         menus.add(menu7)
         menus.add(menu8)
-        menus.add(menu8)
         menus.add(menu9)
         menus.add(menu10)
         menus.add(menu11)
@@ -80,15 +81,17 @@ class DetalheMenuActivity : AppCompatActivity() {
 
         Glide.with(this)
                 .load(place?.placeImage)
+                .override(540,342)
+                .centerInside()
                 .into(ivDestaque)
         tvDestaqueName.text = place?.placeName
 
         findViewById<RecyclerView>(R.id.rvDetalheMenuList).apply{
             layoutManager = GridLayoutManager(this@DetalheMenuActivity,2,GridLayoutManager.VERTICAL,true)
             adapter = MenuAdapter(menuEscolha) { position ->
-//            val intent = Intent(this@HomeActivity, RegisterActivity::class.java)
-//            intent.putExtra(KEY_INTENT_PLACE,places[position])
-//            startActivity(intent)
+            val intent = Intent(this@DetalheMenuActivity, DetalheEscolhaMenuActivity::class.java)
+            intent.putExtra(KEY_INTENT_MENU,menuEscolha[position])
+            startActivity(intent)
             }
         }
 
@@ -96,5 +99,10 @@ class DetalheMenuActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    companion object{
+        const val KEY_INTENT_MENU = "menu"
+    }
 }
+
 

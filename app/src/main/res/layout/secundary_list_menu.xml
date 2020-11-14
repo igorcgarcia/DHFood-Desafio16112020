@@ -41,9 +41,10 @@
                     android:id="@+id/ivProdName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Titulo"
+                    android:text="Salada com molho Gengibre "
                     android:textAlignment="center"
-                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textSize="24sp"
+                    android:textColor="@color/midgrey"
                     />
 
             </LinearLayout>

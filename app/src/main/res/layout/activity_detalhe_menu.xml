@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetalheMenuActivity">
+    tools:context="com.desafio.dhfoodd2.DetalheMenuActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -65,7 +65,7 @@
         android:layout_marginBottom="15dp"
         android:layout_marginLeft="19dp"
         android:text="Pratos principais"
-        android:textColor="@color/gray"
+        android:textColor="@color/grey"
         android:textStyle="bold"
         android:textSize="36sp"
         app:layout_constraintTop_toBottomOf="@id/ivDestaque"

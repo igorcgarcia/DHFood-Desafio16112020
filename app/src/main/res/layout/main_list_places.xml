@@ -35,31 +35,33 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="12dp">
 
                                 <!-- Title, secondary and supporting text -->
                                 <TextView
                                     android:id="@+id/tvListName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Titulo"
-                                    android:textAppearance="?attr/textAppearanceHeadline6"
+                                    android:text="Tony Roma's"
+                                    android:textSize="36sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/darkblue"
                                     />
                                 <TextView
                                     android:id="@+id/tvListAddress"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="secondary_text"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/grey"
                                     />
                                 <TextView
                                     android:id="@+id/tvListClose"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="supporting_text"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    android:textColor="?android:attr/textColorSecondary"
+                                    android:text="Fecha às 22:00"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/grey"
                                     />
 
                         </LinearLayout>

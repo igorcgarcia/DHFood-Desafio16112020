@@ -1,4 +1,4 @@
-package com.example.dhfoodd2
+package com.desafio.dhfoodd2
 
 import android.content.res.Resources
 import android.util.DisplayMetrics
@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.util.Util
+//import com.example.dhfoodd2.R
 import java.lang.reflect.Array.get
 import java.security.AccessController.getContext
 
@@ -25,13 +26,13 @@ class PlaceAdapter(private val placeList: List<Places>,
                    private val onItemClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<PlaceAdapter.ViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlaceAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.main_list_places, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: PlaceAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(placeList[position], onItemClicked)
     }
 

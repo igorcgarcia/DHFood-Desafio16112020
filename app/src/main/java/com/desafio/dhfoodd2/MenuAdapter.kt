@@ -1,4 +1,4 @@
-package com.example.dhfoodd2
+package com.desafio.dhfoodd2
 
 import android.content.Context
 import android.content.res.Resources
@@ -8,26 +8,29 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.util.Util
+//import com.example.dhfoodd2.R
 import java.lang.reflect.Array.get
 import java.security.AccessController.getContext
 
 
 class MenuAdapter(private val menuList: List<Menus>,
-                  private val onItemClicked: (Int) -> Unit
+                  private val onItemMenuClicked: (Int) -> Unit
 ) : RecyclerView.Adapter<MenuAdapter.ViewHolder>(){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.secundary_list_menu, parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MenuAdapter.ViewHolder, position: Int) {
-        holder.bind(menuList[position], onItemClicked)
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder.bind(menuList[position], onItemMenuClicked)
     }
 
     override fun getItemCount(): Int {
@@ -38,8 +41,14 @@ class MenuAdapter(private val menuList: List<Menus>,
 
         private lateinit var ivProd: ImageView
         private lateinit var ivProdName: TextView
+//        private lateinit var DetContainer: ConstraintLayout
 
-        fun bind(menu: Menus, onItemClicked: (Int) -> Unit) = with(itemView){
+        fun bind(menu: Menus, onItemMenuClicked: (Int) -> Unit) = with(itemView){
+
+            val DetContainer by lazy {
+                findViewById<ConstraintLayout>(R.id.DetContainer)
+            }
+
 
             ivProd = findViewById<ImageView>(R.id.ivProd)
             ivProdName = findViewById<TextView>(R.id.ivProdName)
@@ -47,16 +56,9 @@ class MenuAdapter(private val menuList: List<Menus>,
             Glide.with(itemView.context).load(menu.menuImage).into(ivProd)
             ivProdName.text = menu.menuName
 
-
-//            if (user.userMessagesCount > 0 ) {
-//
-//                tvLastView.setTextColor(ContextCompat.getColor(context,R.color.green))
-//                btMessagesCount.text = user.userMessagesCount.toString()
-//                btMessagesCount.isVisible = true
-//            }
-//
-//            MainContainer.setOnClickListener(){
-//                onItemClicked(this@ViewHolder.adapterPosition)
+            DetContainer.setOnClickListener {
+                onItemMenuClicked(this@ViewHolder.adapterPosition)
+            }
 
 
         }

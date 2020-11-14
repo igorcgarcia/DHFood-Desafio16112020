@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
-    android:background="@color/gray"
+    tools:context="com.desafio.dhfoodd2.HomeActivity"
+    android:background="@color/grey"
     >
 
     <androidx.recyclerview.widget.RecyclerView
