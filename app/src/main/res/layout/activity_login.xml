@@ -19,7 +19,6 @@
             android:id="@+id/edMainEmail"
             style="@style/DHFEditText"
             android:inputType="textEmailAddress"
-            android:text="igor.c.garcia@gmail.com"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,7 +35,6 @@
             android:id="@+id/edMainPwd"
             style="@style/DHFEditText"
             android:inputType="textPassword"
-            android:text="senha1"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
