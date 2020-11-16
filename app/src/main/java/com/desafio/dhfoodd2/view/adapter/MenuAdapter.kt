@@ -1,22 +1,17 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.view.adapter
 
-import android.content.Context
-import android.content.res.Resources
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.util.Util
+import com.desafio.dhfoodd2.R
+import com.desafio.dhfoodd2.model.Menus
+
 //import com.example.dhfoodd2.R
-import java.lang.reflect.Array.get
-import java.security.AccessController.getContext
 
 
 class MenuAdapter(private val menuList: List<Menus>,
@@ -41,7 +36,6 @@ class MenuAdapter(private val menuList: List<Menus>,
 
         private lateinit var ivProd: ImageView
         private lateinit var ivProdName: TextView
-//        private lateinit var DetContainer: ConstraintLayout
 
         fun bind(menu: Menus, onItemMenuClicked: (Int) -> Unit) = with(itemView){
 
@@ -50,7 +44,7 @@ class MenuAdapter(private val menuList: List<Menus>,
             }
 
 
-            ivProd = findViewById<ImageView>(R.id.ivProd)
+            ivProd = findViewById<ImageView>(R.id.ivDetalheMenuProduto)
             ivProdName = findViewById<TextView>(R.id.ivProdName)
 
             Glide.with(itemView.context).load(menu.menuImage).into(ivProd)

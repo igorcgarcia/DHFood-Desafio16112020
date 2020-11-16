@@ -1,79 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfMainEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
+        style="@style/DHFTextInput"
         android:layout_marginTop="54dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="Email">
+        android:hint="@string/emailText">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edMainEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            android:background="@color/white"
+            style="@style/DHFEditText"
             android:inputType="textEmailAddress"
+            android:text="igor.c.garcia@gmail.com"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tfMainPwd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColorHint="@color/grey"
-        android:layout_marginTop="54dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
+        style="@style/DHFTextInput"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tfMainEmail"
-        android:hint="Password">
+        android:hint="@string/passwordText">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edMainPwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:textColor="@color/blue"
-            android:background="@color/white"
+            style="@style/DHFEditText"
             android:inputType="textPassword"
+            android:text="senha1"
             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btMainLogin"
+        style="@style/DHFButton"
         app:layout_constraintTop_toBottomOf="@id/tfMainPwd"
-        android:backgroundTint="@color/red"
-        android:textColor="@color/white"
-        android:text="LOG IN"
-        android:textSize="21sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        style="@style/DHFButton"
-        />
+        android:layout_marginTop="67dp"
+        android:backgroundTint="@color/red"
+        tools:targetApi="lollipop" />
 
     <View
         android:id="@+id/dividerLeft"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="@dimen/marginLeftEditText"
+        android:layout_marginEnd="@dimen/marginRightEditText"
+        android:layout_marginTop="@dimen/marginTopDivider"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/dvOr"
@@ -86,7 +70,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="@dimen/marginTopDivider"
         android:background="?android:attr/listDivider"
         app:layout_constraintStart_toEndOf="@id/dvOr"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,26 +81,24 @@
         android:id="@+id/dvOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="OR"
+        android:text="@string/orText"
         android:textColor="@color/darkgrey"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btMainLogin"/>
+        app:layout_constraintTop_toTopOf="@id/dividerLeft"
+        app:layout_constraintBottom_toBottomOf="@id/dividerLeft"
+        />
 
     <Button
         android:id="@+id/btMainRegister"
+        style="@style/DHFButton"
         android:backgroundTint="@color/grey"
-        android:textColor="@color/white"
-        android:text="Register"
-        android:textSize="21sp"
-        android:layout_marginTop="557dp"
+        android:text="@string/registerText"
+        android:layout_marginTop="146dp"
+        app:layout_constraintTop_toBottomOf="@id/dvOr"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/DHFButton"
-        />
-
+        tools:targetApi="lollipop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

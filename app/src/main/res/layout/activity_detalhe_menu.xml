@@ -5,89 +5,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.desafio.dhfoodd2.DetalheMenuActivity">
+    tools:context="com.desafio.dhfoodd2.view.activity.DetalheMenuActivity">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.desafio.dhfoodd2.view.activity.DetalheMenuActivity"
+        >
 
         <ImageView
-            android:id="@+id/ivDestaque"
+            android:id="@+id/ivDetalheMenuDestaque"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="342dp"
             android:src="@drawable/ic_launcher_background"
             android:scaleType="centerCrop"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            />
+            android:contentDescription="@string/image_detalhe_menu"
+        />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/image_shadow"
             app:layout_constraintEnd_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/tvTitulo"
-            android:layout_marginBottom="55dp"
-            />
+            app:layout_constraintTop_toTopOf="@id/tvDetalheMenuDestaqueName"
+            app:layout_constraintBottom_toBottomOf="@id/tvDetalheMenuDestaqueName"
+            android:contentDescription="@string/shadow"
+        />
 
         <ImageView
-            android:id="@+id/ivDetalheBack"
+            android:id="@+id/ivDetalheMenuBack"
             style="@style/DHFButtonBack"
-            android:layout_marginTop="9dp"
-            android:layout_marginLeft="24dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            android:contentDescription="@string/back_buttom"
+        />
 
         <TextView
-            android:id="@+id/tvDestaqueName"
+            android:id="@+id/tvDetalheMenuDestaqueName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:text="Titulo"
-            android:textSize="36sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="11dp"
+            android:text="@string/placeNameDefault"
+            android:textSize="@dimen/placePrimaryTextDefault"
             android:textStyle="bold"
-            android:textAppearance="?attr/textAppearanceHeadline6"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/ivDestaque"
-            />
+            app:layout_constraintBottom_toBottomOf="@id/ivDetalheMenuDestaque"
+        />
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="15dp"
-        android:layout_marginLeft="19dp"
-        android:text="Pratos principais"
-        android:textColor="@color/grey"
-        android:textStyle="bold"
-        android:textSize="36sp"
-        app:layout_constraintTop_toBottomOf="@id/ivDestaque"
-        app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+            android:id="@+id/tvDetalheMenuTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:layout_marginStart="19dp"
+            android:text="@string/tituloPrincipalDetalheMenu"
+            android:textColor="@color/grey"
+            android:textSize="@dimen/placePrimaryTextDefault"
+            app:layout_constraintTop_toBottomOf="@id/ivDetalheMenuDestaque"
+            app:layout_constraintStart_toStartOf="parent"/>
 
 
-    <FrameLayout
-        android:id="@+id/flFragMenu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvDetalheMenuList"
+        <FrameLayout
+            android:id="@+id/flFragMenu"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            tools:itemCount="1"
-            tools:listitem="@layout/secundary_list_menu" />
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvDetalheMenuTitulo"
+            app:layout_constraintStart_toStartOf="parent">
 
-    </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDetalheMenuList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/secundary_list_menu" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

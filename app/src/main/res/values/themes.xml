@@ -15,11 +15,30 @@
     </style>
 
     <style name="DHFButton">
-        <item name="android:layout_marginTop">67dp</item>
-        <item name="android:layout_marginStart">24dp</item>
-        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">@dimen/marginLeftEditText</item>
+        <item name="android:layout_marginEnd">@dimen/marginRightEditText</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">70dp</item>
+        <item name="android:textSize">@dimen/buttonTextSize</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/loginText</item>
+    </style>
+
+    <style name="DHFTextInput">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColorHint">@color/grey</item>
+        <item name="android:layout_marginStart">@dimen/marginLeftEditText</item>
+        <item name="android:layout_marginEnd">@dimen/marginRightEditText</item>
+        <item name="android:layout_marginTop">@dimen/marginTopEditText</item>
+    </style>
+
+    <style name="DHFEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/editTextSize</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:background">@color/white</item>
     </style>
 
     <style name="AppTheme.Fullscreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
@@ -32,6 +51,8 @@
     <style name="DHFButtonBack">
         <item name="srcCompat">@drawable/ic_baseline_arrow_back_24</item>
         <item name="background">?attr/selectableItemBackground</item>
+        <item name="android:layout_marginTop">@dimen/marginTop_ButtomBack</item>
+        <item name="android:layout_marginStart">@dimen/marginStart_ButtomBack</item>
     </style>
 
 </resources>

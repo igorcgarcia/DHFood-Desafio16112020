@@ -8,10 +8,11 @@
     android:id="@+id/DetContainer">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardMenuDetalhe"
+        android:id="@+id/cardDetalheMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,23 +21,21 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Media -->
             <ImageView
-                android:id="@+id/ivProd"
+                android:id="@+id/ivDetalheMenuProduto"
                 android:layout_width="185dp"
-                android:layout_height="160dp"
+                android:layout_height="150dp"
                 android:src="@drawable/ic_launcher_background"
                 android:scaleType="centerCrop"
-                android:contentDescription="teste"
+                android:contentDescription="@string/image_produto"
                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:padding="7dp">
 
-                <!-- Title, secondary and supporting text -->
                 <TextView
                     android:id="@+id/ivProdName"
                     android:layout_width="match_parent"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginLeftEditText">24dp</dimen>
+    <dimen name="marginRightEditText">24dp</dimen>
+    <dimen name="marginTopEditText">12dp</dimen>
+    <dimen name="editTextSize">24sp</dimen>
+    <dimen name="buttonTextSize">21sp</dimen>
+    <dimen name="marginTopDivider">52dp</dimen>
+    <dimen name="heightDefault_ImagePlace">221dp</dimen>
+    <dimen name="placeSecundaryText_Default">18sp</dimen>
+    <dimen name="placeSecundaryText_Default2">16sp</dimen>
+    <dimen name="placePrimaryTextDefault">36sp</dimen>
+    <dimen name="marginTop_ButtomBack">9dp</dimen>
+    <dimen name="marginStart_ButtomBack">24dp</dimen>
+    <dimen name="menuDescriptionDefault">24sp</dimen>
+</resources>

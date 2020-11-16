@@ -1,4 +1,26 @@
 <resources>
     <string name="app_name">Digital House Foods</string>
     <string name="menulista">Menu</string>
+    <string name="designed_by">Designed by Igor Garcia</string>
+    <string name="shadow">shadow</string>
+    <string name="splashimage">splashimage</string>
+    <string name="emailText">Email</string>
+    <string name="passwordText">Password</string>
+    <string name="loginText">LOG IN</string>
+    <string name="orText">OR</string>
+    <string name="registerText">Register</string>
+    <string name="errorMessage">O campo %1$s é obrigatório</string>
+    <string name="errorMessagePwd">As senhas estão diferentes</string>
+    <string name="nameText">Name</string>
+    <string name="image_place">Image Place</string>
+    <string name="placeNameDefault">Tony Roma\'s</string>
+    <string name="placeAddressDefault">Av. Lavandisca, 717 - Indianópolis, São Paulo</string>
+    <string name="placeClosedDefault">Fecha às 22:00</string>
+    <string name="image_detalhe_menu">Image Detalhe Menu</string>
+    <string name="back_buttom">Back Buttom</string>
+    <string name="tituloPrincipalDetalheMenu">Pratos principais</string>
+    <string name="image_produto">Image Produto</string>
+    <string name="menuEscolhaText">Salada com molho Gengibre</string>
+    <string name="image_menu_escolha_destaque">Image Menu Escolha Destaque</string>
+    <string name="menuDescricaoText">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis.</string>
 </resources>

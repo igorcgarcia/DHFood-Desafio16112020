@@ -1,25 +1,16 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.view.adapter
 
-import android.content.res.Resources
-import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.solver.state.State
-import androidx.constraintlayout.solver.widgets.ConstraintWidgetContainer
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.constraintlayout.widget.ConstraintSet
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.CenterInside
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.bumptech.glide.util.Util
+import com.desafio.dhfoodd2.R
+import com.desafio.dhfoodd2.model.Places
 //import com.example.dhfoodd2.R
-import java.lang.reflect.Array.get
-import java.security.AccessController.getContext
-
 
 
 class PlaceAdapter(private val placeList: List<Places>,

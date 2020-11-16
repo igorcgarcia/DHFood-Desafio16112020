@@ -1,4 +1,4 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.desafio.dhfoodd2.R
+import com.desafio.dhfoodd2.model.Menus
 
 class DetalheEscolhaMenuActivity : AppCompatActivity() {
 
@@ -18,7 +19,7 @@ class DetalheEscolhaMenuActivity : AppCompatActivity() {
     }
 
     private val tvMenuDestaqueName by lazy {
-        findViewById<TextView>(R.id.tvMenuDestaqueName)
+        findViewById<TextView>(R.id.tvMenuEscolhaDestaqueName)
     }
 
     private val tvMenuDestaqueDescricao by lazy {

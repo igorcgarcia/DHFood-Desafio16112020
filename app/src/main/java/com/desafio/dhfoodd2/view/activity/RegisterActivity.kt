@@ -1,9 +1,10 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.desafio.dhfoodd2.R
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
@@ -62,29 +63,29 @@ class RegisterActivity : AppCompatActivity() {
             val rpwd = edRegisterRPwd.text.toString()
             var isValid = true
 
-            if (name.isNullOrBlank()){
-                edRegisterName.error ="Campo obrgatório"
+            if (name.isBlank()){
+                edRegisterName.error = getString(R.string.errorMessage,getString(R.string.nameText))
                 isValid = false
             } else {
                 tfRegisterName.isErrorEnabled = false
             }
 
-            if (email.isNullOrBlank()){
-                edRegisterEmail.error = "Campo obrigatório"
+            if (email.isBlank()){
+                edRegisterEmail.error = getString(R.string.errorMessage,getString(R.string.emailText))
                 isValid = false
             } else {
                 tfRegisterEmail.isErrorEnabled = false
             }
 
-            if (pwd.isNullOrBlank()) {
-                edRegisterPwd.error = "Campo obrigatório"
+            if (pwd.isBlank()) {
+                edRegisterPwd.error = getString(R.string.errorMessage,getString(R.string.passwordText))
                 isValid = false
             } else {
                 tfRegisterPwd.isErrorEnabled = false
             }
 
-            if (rpwd.isNullOrBlank()){
-                edRegisterRPwd.error = "Campo obrigatório"
+            if (rpwd.isBlank()){
+                edRegisterRPwd.error = getString(R.string.errorMessage,getString(R.string.passwordText))
                 isValid = false
             } else {
                 tfRegisterRPwd.isErrorEnabled = false
@@ -93,7 +94,7 @@ class RegisterActivity : AppCompatActivity() {
             if (rpwd.equals(pwd)){
                 tfRegisterRPwd.isErrorEnabled = false
             } else {
-                edRegisterRPwd.error = "Senhas diferentes"
+                edRegisterRPwd.error = getString(R.string.errorMessagePwd)
                 isValid = false
             }
 

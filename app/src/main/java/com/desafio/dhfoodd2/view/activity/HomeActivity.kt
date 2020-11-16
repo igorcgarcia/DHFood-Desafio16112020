@@ -1,10 +1,13 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.view.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.desafio.dhfoodd2.R
+import com.desafio.dhfoodd2.model.Places
+import com.desafio.dhfoodd2.view.adapter.PlaceAdapter
 
 class HomeActivity : AppCompatActivity() {
 
@@ -23,7 +26,7 @@ class HomeActivity : AppCompatActivity() {
                 "Bráz Elettrica",
                 "Rua Guaicuí, 38 - Pinheiros",
                 "Segunda a Quinta, das 18h às 22h")
-        val place3 = Places("https://conteudo.imguol.com.br/c/noticias/08/2018/05/17/da-mooca-pizza-shop-pizza-parma-1526579996941_1200x800.jpg",
+        val place3 = Places("https://conteudo.imguol.com.br/c/noticias/60/2018/05/17/da-mooca-pizza-shop-1526579993678_300x200.jpg",
                 "Da Mocca Pizza Shop",
                 "RUA Fradique Coutinho, 154",
                 "Segunda à Sábado, das 11h às 00h")

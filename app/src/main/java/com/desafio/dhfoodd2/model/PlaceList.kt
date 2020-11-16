@@ -1,4 +1,4 @@
-package com.desafio.dhfoodd2
+package com.desafio.dhfoodd2.model
 
 import android.os.Parcel
 import android.os.Parcelable

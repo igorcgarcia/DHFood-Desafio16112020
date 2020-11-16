@@ -4,15 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
-    android:layout_marginBottom="8dp"
     android:id="@+id/mainListContainer">
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="13dp"
+            app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -21,46 +22,46 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                        <!-- Media -->
                         <ImageView
                             android:id="@+id/ivListProduct"
                             android:layout_width="match_parent"
-                            android:layout_height="194dp"
+                            android:layout_height="@dimen/heightDefault_ImagePlace"
                             android:src="@drawable/ic_launcher_background"
                             android:scaleType="centerCrop"
-                            android:contentDescription="teste"
+                            android:contentDescription="@string/image_place"
                             />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="12dp">
+                            android:layout_marginStart="24dp"
+                            android:layout_marginBottom="14dp"
+                            android:orientation="vertical">
 
-                                <!-- Title, secondary and supporting text -->
                                 <TextView
                                     android:id="@+id/tvListName"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Tony Roma's"
-                                    android:textSize="36sp"
-                                    android:textStyle="bold"
+                                    android:padding="0dp"
+                                    android:layout_marginTop="8dp"
+                                    android:text="@string/placeNameDefault"
                                     android:textColor="@color/darkblue"
-                                    />
+                                    android:textSize="@dimen/placePrimaryTextDefault"
+                                    android:textStyle="bold" />
                                 <TextView
                                     android:id="@+id/tvListAddress"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Av. Lavandisca, 717 - Indianópolis, São Paulo"
-                                    android:textSize="18sp"
+                                    android:text="@string/placeAddressDefault"
+                                    android:textSize="@dimen/placeSecundaryText_Default"
                                     android:textColor="@color/grey"
                                     />
                                 <TextView
                                     android:id="@+id/tvListClose"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Fecha às 22:00"
-                                    android:textSize="18sp"
+                                    android:text="@string/placeClosedDefault"
+                                    android:textSize="@dimen/placeSecundaryText_Default2"
                                     android:textColor="@color/grey"
                                     />
 
